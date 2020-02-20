@@ -6,7 +6,13 @@ import { Input } from '../components';
 export default { title: 'Components/Input', component: Input };
 
 export const Default = () => (
-  <Input id="beans" onInput={action('input')} onFocus={action('focus')} onBlur={action('blur')}>
+  <Input
+    id="input-default"
+    placeholder={text('Placeholder', 'Placeholder')}
+    onInput={action('input')}
+    onFocus={action('focus')}
+    onBlur={action('blur')}
+  >
     {text('Label', 'Label')}
   </Input>
 );

@@ -19,13 +19,14 @@ const Label = styled.label`
   font-weight: 600;
 `;
 
-export default ({ id, onInput, onFocus, onBlur, type = 'text', children }) => {
+export default ({ id, type = 'text', placeholder, onInput, onFocus, onBlur, children }) => {
   return (
     <div>
       <Label htmlFor={id}>{children}</Label>
       <Input
         id={id}
         type={type}
+        placeholder={placeholder}
         onInput={e => onInput(e.target.value)}
         onFocus={onFocus}
         onBlur={onBlur}
