@@ -22,7 +22,6 @@ export default () => {
     setSettings(
       settings.map(setting => {
         if (setting.id === changedSetting.id) {
-          console.log(setting.value, newValue);
           return { ...setting, value: newValue };
         }
 
