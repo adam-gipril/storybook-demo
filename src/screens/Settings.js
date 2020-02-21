@@ -41,7 +41,7 @@ export default () => {
                 id={setting.id}
                 key={setting.id}
                 value={setting.value}
-                onInput={value => onSettingChange(setting, value)}
+                onChange={value => onSettingChange(setting, value)}
               >
                 {setting.name}
               </Input>

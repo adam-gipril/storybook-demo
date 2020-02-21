@@ -11,7 +11,7 @@ export const Default = () => (
   <Select
     id="select-default"
     options={options}
-    onInput={action('input')}
+    onChange={action('input')}
     onFocus={action('focus')}
     onBlur={action('blur')}
   >

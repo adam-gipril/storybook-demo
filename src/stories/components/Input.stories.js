@@ -9,7 +9,7 @@ export const Default = () => (
   <Input
     id="input-default"
     placeholder={text('Placeholder', 'Placeholder')}
-    onInput={action('input')}
+    onChange={action('input')}
     onFocus={action('focus')}
     onBlur={action('blur')}
   >
