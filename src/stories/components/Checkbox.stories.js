@@ -1,7 +1,7 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
 import { text } from '@storybook/addon-knobs';
-import { Checkbox } from '../components';
+import { Checkbox } from '../../components';
 
 export default { title: 'Components/Checkbox', component: Checkbox };
 
