@@ -25,15 +25,19 @@ const Label = styled.label`
   font-weight: 600;
 `;
 
-export default ({ id, options, value, onInput, onFocus, onBlur, children }) => {
+export default ({ id, options, value, onChange, onFocus, onBlur, children }) => {
   return (
     <div>
       <Label htmlFor={id}>{children}</Label>
-      <Select id={id} onInput={e => onInput(e.target.value)} onFocus={onFocus} onBlur={onBlur}>
+      <Select
+        id={id}
+        defaultValue={value}
+        onChange={e => onChange(e.target.value)}
+        onFocus={onFocus}
+        onBlur={onBlur}
+      >
         {options.map(option => (
-          <option key={option} selected={option === value}>
-            {option}
-          </option>
+          <option key={option}>{option}</option>
         ))}
       </Select>
     </div>

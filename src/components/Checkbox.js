@@ -10,9 +10,9 @@ const Label = styled.label`
   font-weight: 600;
 `;
 
-export default ({ onChange, children }) => (
+export default ({ value, onChange, children }) => (
   <Label>
-    <Input type="checkbox" onChange={e => onChange(e.target.checked)} />
+    <Input type="checkbox" checked={value} onChange={e => onChange(e.target.checked)} />
     {children}
   </Label>
 );
